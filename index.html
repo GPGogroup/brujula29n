@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brújula 29-N · Test de afinidad para las elecciones generales 2026</title>
+<meta name="description" content="Resumen neutral de los partidos que se presentan a las elecciones generales del 29 de noviembre de 2026, su historia y sus propuestas explicadas, y un test de 25 preguntas que calcula tu porcentaje de afinidad con cada partido.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#131A22">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23131A22'/%3E%3Crect x='14' y='30' width='36' height='22' rx='3' fill='%23fff'/%3E%3Crect x='22' y='10' width='20' height='26' rx='2' fill='%23fff' stroke='%23131A22' stroke-width='3'/%3E%3Crect x='20' y='29' width='24' height='4' fill='%23131A22'/%3E%3C/svg%3E">
+<!-- Vista previa al compartir (WhatsApp, X, Facebook, LinkedIn).
+     Cuando tengas la dirección definitiva, cambia og-image.png por la URL completa, p. ej. https://tu-web.netlify.app/og-image.png -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Brújula 29-N · ¿Con qué partido encajas?">
+<meta property="og:description" content="Los partidos del 29-N explicados sin opinar y un test de 25 preguntas con tu % de afinidad con cada uno.">
+<meta property="og:image" content="https://gpgogroup.github.io/brujula29n/og-image.png">
+<meta property="og:url" content="https://gpgogroup.github.io/brujula29n/">
+<link rel="canonical" href="https://gpgogroup.github.io/brujula29n/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Brújula 29-N","inLanguage":"es","description":"Resumen neutral de los partidos que se presentan a las elecciones generales del 29 de noviembre de 2026, su historia y sus propuestas explicadas, y un test de 25 preguntas que calcula tu porcentaje de afinidad con cada partido.","dateModified":"2026-11-10"}
+</script>
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0} img{max-width:100%} [hidden]{display:none!important}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: columna de lectura estrecha; arriba la "papeleta" con la cuenta atrás, luego partidos en rejilla, luego el quiz de una pregunta por pantalla y el escrutinio. Colores de partido solo como datos. */
+:root{
+  --bg:#F2F4F6; --paper:#FFFFFF; --ink:#131A22; --muted:#5A6672; --line:#D9DEE4;
+  --accent:#131A22; --accent-fg:#FFFFFF; --mark:#E8EDF2; --good:#1F7A4D; --bad:#B23A3A;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F141A; --paper:#171E26; --ink:#E7ECF1; --muted:#9AA6B2; --line:#2A3440;
+  --accent:#E7ECF1; --accent-fg:#0F141A; --mark:#222B35; --good:#5CC48F; --bad:#E07B7B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F141A; --paper:#171E26; --ink:#E7ECF1; --muted:#9AA6B2; --line:#2A3440;
+  --accent:#E7ECF1; --accent-fg:#0F141A; --mark:#222B35; --good:#5CC48F; --bad:#E07B7B; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);
+  padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
+.wrap{max-width:980px;margin:0 auto;padding-block:32px 64px;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(2.4rem,7vw,4.2rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700}
+h3{font-size:1.25rem;font-weight:700}
+p{margin:0}
+.eyebrow{font:500 .75rem/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.lead{font-size:1.1rem;max-width:62ch;color:var(--muted)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* Cabecera tipo papeleta */
+.ballot{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.ballot .txt{display:flex;flex-direction:column;gap:14px;min-width:0}
+.count{border:2px dashed var(--line);border-radius:6px;padding:16px 22px;text-align:center;min-width:150px}
+.count b{display:block;font:800 3.2rem/1 var(--display)}
+.count span{font-size:.85rem;color:var(--muted)}
+.nav{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:var(--accent);color:var(--accent-fg);border:0;border-radius:4px;padding:10px 18px;font-weight:600;text-decoration:none;display:inline-block}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+@media (max-width:620px){.ballot{grid-template-columns:1fr;padding:22px 18px}.count{justify-self:start;display:flex;align-items:baseline;gap:8px;padding:8px 14px;min-width:0}.count b{font-size:2rem}}
+
+/* Contexto */
+.context{display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+.context > div{min-width:0;display:flex;flex-direction:column;gap:14px}
+.context ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px}
+.poll{display:flex;flex-direction:column;gap:10px}
+.prow{display:grid;grid-template-columns:70px 1fr 52px;gap:10px;align-items:center;font-size:.9rem}
+.ptrack{height:12px;background:var(--mark);border-radius:2px;overflow:hidden}
+.pfill{height:100%}
+.src{font-size:.78rem;color:var(--muted)}
+@media (max-width:760px){.context{grid-template-columns:1fr}}
+
+/* Partidos */
+.sechead{display:flex;flex-direction:column;gap:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.party{background:var(--paper);border:1px solid var(--line);border-top:5px solid var(--pc);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.party .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.tag{font:500 .7rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.party .who{font-size:.9rem}
+.party .who b{font-weight:600}
+.party p.hist{font-size:.92rem}
+.party details{font-size:.9rem;border-top:1px solid var(--line);padding-top:8px}
+.party summary{cursor:pointer;font-weight:600}
+.party details ul{margin:8px 0 0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px}
+.props{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.party details.prop{border:1px solid var(--line);border-radius:4px;padding:6px 10px}
+.party details.prop summary{font-weight:500}
+.party details.prop[open] summary{font-weight:600}
+.pbody{display:flex;flex-direction:column;gap:6px;padding-top:6px;font-size:.86rem;color:var(--ink)}
+.pbody b{font-weight:600}
+.plink{font-size:.85rem;color:var(--muted);margin-top:auto}
+.plink:hover{color:var(--ink)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:.75rem;padding:2px 8px;border-radius:99px;background:var(--mark)}
+.subgroup{font:600 .8rem/1 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:8px}
+
+/* Quiz */
+.quiz{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:28px;display:flex;flex-direction:column;gap:22px}
+.qmeta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.bar{height:6px;background:var(--mark);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ink);transition:width .25s}
+.qtext{font:700 clamp(1.25rem,3.2vw,1.65rem)/1.25 var(--display);text-wrap:balance;min-height:3.8em}
+.qhelp{font-size:.9rem;color:var(--muted);max-width:68ch}
+.likert{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.likert button{border:1px solid var(--line);background:transparent;border-radius:4px;padding:12px 6px;font-size:.88rem;line-height:1.25;min-height:58px}
+.likert button.on{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.likert button:hover{border-color:var(--ink)}
+.qfoot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.imp{display:flex;gap:12px;align-items:flex-start;font-size:.92rem;border:1px dashed var(--line);border-radius:4px;padding:10px 14px;cursor:pointer}
+.imp:has(input:checked){border-style:solid;border-color:var(--ink);background:var(--mark)}
+.imp input{width:18px;height:18px;margin-top:2px;flex:none}
+.imp span{display:flex;flex-direction:column}
+.imp small{color:var(--muted);font-size:.82rem}
+.qnav{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:560px){.likert{grid-template-columns:1fr}.likert button{min-height:auto;text-align:left;padding:12px 14px}.quiz{padding:20px}}
+
+/* Resultados */
+.results{display:flex;flex-direction:column;gap:18px}
+.rrow{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.rhead{display:grid;grid-template-columns:150px 1fr 64px;gap:12px;align-items:center;cursor:pointer;background:none;border:0;padding:0;text-align:left;width:100%}
+.rname{font-weight:600;display:flex;gap:8px;align-items:center;min-width:0}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--pc);flex:none}
+.rtrack{height:14px;background:var(--mark);border-radius:2px;overflow:hidden}
+.rfill{height:100%;background:var(--pc);transition:width .6s ease}
+.rpct{font:600 1.05rem var(--mono);text-align:right}
+.rdetail{font-size:.88rem;display:grid;grid-template-columns:1fr 1fr;gap:16px;border-top:1px solid var(--line);padding-top:10px}
+.rdetail > div{min-width:0}
+.rdetail ul{margin:6px 0 0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px}
+.ok{color:var(--good);font-weight:600}.ko{color:var(--bad);font-weight:600}
+.top3{display:flex;gap:12px;flex-wrap:wrap}
+.top3 div{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--pc);border-radius:6px;padding:12px 16px;flex:1 1 180px}
+.top3 b{display:block;font:800 2rem/1 var(--display)}
+@media (max-width:560px){.top3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.top3 div{padding:10px;font-size:.82rem;border-left-width:4px;overflow-wrap:anywhere}.top3 b{font-size:1.4rem;margin-block:4px}.top3 .eyebrow{font-size:.62rem;letter-spacing:.06em}
+.rhead{grid-template-columns:1fr 56px}.rtrack{grid-column:1 / -1;grid-row:2}.rdetail{grid-template-columns:1fr}}
+
+.note{font-size:.85rem;color:var(--muted);max-width:75ch;display:flex;flex-direction:column;gap:6px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="ballot">
+  <div class="txt">
+    <span class="eyebrow">Elecciones generales · domingo 29 de noviembre de 2026</span>
+    <h1>Brújula 29-N</h1>
+    <p class="lead">Quién se presenta, de dónde viene cada partido y un test de 25 preguntas que calcula en qué porcentaje encajas con cada uno.</p>
+    <div class="nav"><a class="btn" href="#quiz">Hacer el test</a><a class="btn ghost" href="#partidos">Ver los partidos</a></div>
+  </div>
+  <div class="count"><b class="num" id="days">19</b><span id="dayslbl">días para votar</span></div>
+</header>
+
+<section class="context" aria-labelledby="ctx">
+  <div>
+    <span class="eyebrow">Contexto</span>
+    <h2 id="ctx">Unas generales adelantadas</h2>
+    <ul>
+      <li>Pedro Sánchez anunció el 5 de octubre el adelanto de unas elecciones que tocaban en 2027.</li>
+      <li>El BOE publicó el 3 de noviembre 534 candidaturas al Congreso y 361 al Senado.</li>
+      <li>La gran novedad en la izquierda es <b>Frente Amplio</b> (Sumar, IU, Más Madrid, Comuns y siete partidos más) con Ada Colau de candidata. <b>Podemos</b> va por separado con Irene Montero.</li>
+      <li>En el centro reaparece Ciudadanos dentro de <b>D21</b>, la coalición de Miriam González Durántez.</li>
+      <li>Óscar Puente dimitió como ministro de Transportes el 3 de noviembre tras el accidente ferroviario de Urda (Toledo).</li>
+      <li>Para gobernar hacen falta <b>176 escaños</b> en la investidura (o más síes que noes en segunda votación).</li>
+    </ul>
+  </div>
+  <div id="vedaBox" hidden>
+    <span class="eyebrow">Sondeos</span>
+    <h3 id="vedaTit">Periodo de veda</h3>
+    <p id="vedaTxt"></p>
+  </div>
+  <div id="pollBox">
+    <span class="eyebrow">Último sondeo</span>
+    <h3>DYM, 10 de noviembre</h3>
+    <div class="poll" id="poll"></div>
+    <p class="src">Estimación de voto DYM para 20minutos. Escaños: PP 135-139, PSOE 104-108, Vox 63-66. Otros institutos (Sondaxe, 8-nov) dan al PP 29,7 %. Los sondeos difieren entre sí: mira la tendencia, no la décima.</p>
+  </div>
+</section>
+
+<section id="partidos" class="sechead" aria-labelledby="ph">
+  <span class="eyebrow">Quién se presenta</span>
+  <h2 id="ph">Los partidos, en resumen</h2>
+  <p class="lead">Ordenados por escaños obtenidos en 2023. En «Propuestas destacadas», cada una se despliega con lo que es, lo que cambiaría y los argumentos de quien la apoya y de quien la critica. Es una selección de las medidas más características de cada partido, no su programa completo: para eso, usa el enlace de cada ficha.</p>
+  <div class="subgroup">Ámbito estatal</div>
+  <div class="grid" id="gridState"></div>
+  <div class="subgroup">Nacionalistas y regionalistas</div>
+  <div class="grid" id="gridReg"></div>
+</section>
+
+<section id="quiz" class="sechead" aria-labelledby="qh">
+  <span class="eyebrow">El test</span>
+  <h2 id="qh">¿Con quién encajas?</h2>
+  <p class="lead">Di cuánto estás de acuerdo con cada frase. Si un tema te pesa especialmente a la hora de votar, marca «Este tema es clave para mí» antes de responder: esa pregunta contará el doble. «No lo tengo claro» se salta la pregunta sin sumar ni restar.</p>
+  <div class="quiz" id="quizBox">
+    <div class="qmeta"><span class="eyebrow" id="qcat">Economía</span><span class="num" id="qnum">1 / 25</span></div>
+    <div class="bar"><i id="qbar" style="width:4%"></i></div>
+    <div class="qtext" id="qtext">Cargando…</div>
+    <p class="qhelp" id="qhelp"></p>
+    <label class="imp" for="impo"><input type="checkbox" id="impo"><span><b>Este tema es clave para mí</b><small>Márcalo antes de responder y esta pregunta contará el doble en tu resultado.</small></span></label>
+    <div class="likert" id="likert" role="group" aria-label="Grado de acuerdo"></div>
+    <div class="qfoot">
+      <div class="qnav">
+        <button class="btn ghost" id="prev">Anterior</button>
+        <button class="btn ghost" id="skip">No lo tengo claro</button>
+        <button class="btn" id="next" hidden>Ver resultado</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resultado" class="sechead" aria-labelledby="rh" hidden>
+  <span class="eyebrow">Escrutinio</span>
+  <h2 id="rh">Tu afinidad con cada partido</h2>
+  <p class="lead" id="rlead"></p>
+  <div class="top3" id="top3"></div>
+  <div class="results" id="results"></div>
+  <div class="qnav"><button class="btn ghost" id="restart">Repetir el test</button><a class="btn ghost" href="#quiz">Revisar respuestas</a></div>
+</section>
+
+<footer class="note">
+  <b>Cómo se calcula.</b>
+  <p>Cada partido tiene una postura en cada pregunta, de −2 (muy en contra) a +2 (muy a favor), asignada a partir de sus programas, votaciones en el Congreso y declaraciones públicas hasta noviembre de 2026. La afinidad es 100 % menos la distancia media entre tu respuesta y la suya, ponderada por la importancia que le das.</p>
+  <p>Es una simplificación orientativa: algunos partidos tienen posturas matizadas o cambiantes y varias preguntas solo distinguen a parte de ellos. No es una recomendación de voto. Contrasta con los programas oficiales de cada formación antes del 29-N.</p>
+  <p>Última actualización: 10 de noviembre de 2026.</p>
+</footer>
+</div>
+
+<script>
+const P = {
+  PSOE:{n:"PSOE",c:"#E1001A"}, PP:{n:"PP",c:"#1D84CE"}, VOX:{n:"Vox",c:"#5BAE24"},
+  FA:{n:"Frente Amplio",c:"#D6246E"}, POD:{n:"Podemos",c:"#7A3A7A"}, SALF:{n:"SALF",c:"#8A6A4F"},
+  D21:{n:"D21 (con Cs)",c:"#F08A24"}, ERC:{n:"ERC",c:"#E3A600"}, JUNTS:{n:"Junts",c:"#1FB5A6"},
+  PNV:{n:"PNV",c:"#3B8E3A"}, BILDU:{n:"EH Bildu",c:"#2E6F66"}, BNG:{n:"BNG",c:"#5FA4D6"}, CC:{n:"Coalición Canaria",c:"#C9A300"}
+};
+const ORDER = ["PSOE","PP","VOX","FA","POD","SALF","D21","ERC","JUNTS","PNV","BILDU","BNG","CC"];
+
+const FICHAS = {
+  PSOE:{tag:"Centroizquierda · socialdemócrata", lider:"Pedro Sánchez", e23:"121 escaños (2023)", web:"https://www.psoe.es",
+    hist:"Fundado en 1879 por Pablo Iglesias Posse, es el partido más antiguo de España. Gobernó con Felipe González (1982-1996), Zapatero (2004-2011) y Sánchez, que llegó en 2018 con la moción de censura a Rajoy y gobierna desde 2020 en coalición con Unidas Podemos y luego Sumar.",
+    prop:["jornada","smi","vivienda_publica","tope_alquiler","aborto_const","fin_singular"]},
+  PP:{tag:"Centroderecha · conservador-liberal", lider:"Alberto Núñez Feijóo", e23:"137 escaños (2023)", web:"https://www.pp.es",
+    hist:"Nace en 1989 como refundación de Alianza Popular (Manuel Fraga, 1976). Gobernó con Aznar (1996-2004) y Rajoy (2011-2018). Feijóo, expresidente de la Xunta, lo lidera desde 2022. Ganó las elecciones de 2023 pero no logró la investidura.",
+    prop:["irpf","suelo","okupacion","cgpj","nucleares"]},
+  VOX:{tag:"Derecha radical · nacional-conservador", lider:"Santiago Abascal", e23:"33 escaños (2023)", web:"https://www.voxespana.es",
+    hist:"Fundado en 2013 por antiguos cargos del PP; Abascal lo preside desde 2014. Entró en el Parlamento andaluz en 2018 y llegó a 52 escaños en el Congreso en noviembre de 2019. En 2023 obtuvo 33.",
+    prop:["expulsiones","prioridad_nacional","recentralizar","irpf","derogar_leyes"]},
+  FA:{tag:"Izquierda · ecologista", lider:"Ada Colau", e23:"Nueva (Sumar sacó 31 escaños en 2023)", web:null,
+    hist:"Coalición creada en 2026 por Movimiento Sumar, Izquierda Unida, Más Madrid y Catalunya en Comú, más siete partidos menores. Hereda el espacio de Sumar (2023) y antes Unidas Podemos. Colau fue alcaldesa de Barcelona entre 2015 y 2023 y procede del activismo por la vivienda (PAH).",
+    prop:["expropiar_fondos","tope_alquiler","impuesto_fortunas","jornada","transicion"]},
+  POD:{tag:"Izquierda radical", lider:"Irene Montero (candidata) · Ione Belarra (secretaria general)", e23:"Fue dentro de Sumar; hoy 4 diputados en el Grupo Mixto", web:"https://podemos.info",
+    hist:"Nació en 2014 de la mano de Pablo Iglesias tras el 15-M. Llegó a 69 escaños en 2015 y entró en el Gobierno de coalición en 2020. En 2023 concurrió dentro de Sumar y rompió con ella meses después. Montero fue ministra de Igualdad y hoy es eurodiputada.",
+    prop:["israel","gasto_militar","vivienda_publica","referendum_monarquia","regularizacion"]},
+  SALF:{tag:"Derecha · populista", lider:"Alvise Pérez", e23:"Primera vez en unas generales", web:null,
+    hist:"Agrupación surgida en torno a Alvise Pérez, conocido por su actividad en redes sociales. En las europeas de 2024 obtuvo un 4,6 % y 3 eurodiputados. Combina discurso anticorrupción, mano dura en seguridad e inmigración y rechazo a los partidos tradicionales.",
+    prop:["expulsiones","gasto_politico","irpf","corrupcion_penas"]},
+  D21:{tag:"Centro · liberal", lider:"Miriam González Durántez", e23:"Nueva (Cs se quedó sin escaños en 2023)", web:null,
+    hist:"Coalición entre Democracia 21, el partido de la abogada Miriam González Durántez registrado en 2026, Ciudadanos y UCIN. Ciudadanos nació en Cataluña en 2006, llegó a 57 escaños en abril de 2019 y desapareció del Congreso en 2023.",
+    prop:["cgpj","integracion_ue","gasto_militar","igualdad_territorial","suelo"]},
+  ERC:{tag:"Izquierda · independentista catalán", lider:"Gabriel Rufián (candidato) · Oriol Junqueras (presidente)", e23:"7 escaños (2023)", web:"https://www.esquerra.cat",
+    hist:"Fundada en 1931; Francesc Macià y Lluís Companys presidieron la Generalitat. Defiende la independencia de Cataluña por vías pacíficas y fue socio clave de Sánchez. En 2026 incluye a representantes de Podemos en sus listas.",
+    prop:["fin_singular","referendum_autodet","tope_alquiler","lenguas"]},
+  JUNTS:{tag:"Centroderecha · independentista catalán", lider:"Míriam Nogueras (Carles Puigdemont, presidente)", e23:"7 escaños (2023)", web:"https://junts.cat",
+    hist:"Fundado en 2020 por Puigdemont, recoge el espacio de la antigua Convergència de Jordi Pujol. Sus votos hicieron presidente a Sánchez en 2023 a cambio de la amnistía, pero rompió con el PSOE en octubre de 2025.",
+    prop:["concierto","competencias_inmigracion","sociedades","oficialidad_ue"]},
+  PNV:{tag:"Centro · nacionalista vasco democristiano", lider:"Maribel Vaquero (candidata) · Aitor Esteban (presidente)", e23:"5 escaños (2023)", web:"https://www.eaj-pnv.eus",
+    hist:"Fundado en 1895 por Sabino Arana. Ha gobernado el País Vasco casi sin interrupción desde 1980. Pragmático, ha pactado con PSOE y con PP según el momento, priorizando el autogobierno y el Concierto Económico.",
+    prop:["transferencias","concierto","nuevo_estatus","sociedades"]},
+  BILDU:{tag:"Izquierda · independentista vasco", lider:"Oskar Matute (candidato) · Arnaldo Otegi (coordinador)", e23:"6 escaños (2023)", web:"https://ehbildu.eus",
+    hist:"Coalición de la izquierda abertzale creada en 2011-2012 (Sortu, EA, Alternatiba, Aralar), tras el fin de la violencia de ETA. Ha crecido hasta disputar la hegemonía al PNV y fue socio de investidura de Sánchez. En Navarra concurre con Geroa Bai.",
+    prop:["referendum_autodet","vivienda_publica","tope_alquiler","lenguas"]},
+  BNG:{tag:"Izquierda · nacionalista gallego", lider:"Néstor Rego (candidato) · Ana Pontón (portavoz nacional)", e23:"1 escaño (2023)", web:"https://www.bng.gal",
+    hist:"Fundado en 1982 como frente de organizaciones nacionalistas gallegas. Con Ana Pontón se convirtió en 2020 y 2024 en la segunda fuerza del Parlamento gallego.",
+    prop:["concierto","ap9","lenguas"]},
+  CC:{tag:"Centro · nacionalista canario", lider:"Cristina Valido", e23:"1 escaño (2023)", web:"https://coalicioncanaria.org",
+    hist:"Fundada en 1993 como unión de agrupaciones insulares. Ha gobernado Canarias buena parte de este tiempo y hoy preside el Gobierno canario con el PP. Vota según lo que consiga para las islas.",
+    prop:["menores_migrantes","ref"]}
+};
+
+// Explicación neutral de cada propuesta: qué es, qué cambiaría y los argumentos de cada lado.
+const EXPL = {
+ jornada:{t:"Reducir la jornada laboral a 37,5 horas",
+  q:"Bajar por ley la jornada máxima de 40 a 37,5 horas semanales sin rebajar el sueldo. El Gobierno la llevó al Congreso en 2025 y fue rechazada con los votos de PP, Vox y Junts.",
+  si:"Más tiempo libre y conciliación, y repartir entre los trabajadores parte de lo que ha crecido la productividad.",
+  no:"Sube el coste por hora trabajada; pesaría más en pymes y en sectores como hostelería, comercio o campo."},
+ smi:{t:"Seguir subiendo el salario mínimo",
+  q:"El SMI es el sueldo más bajo que se puede pagar por jornada completa. Ha subido de forma fuerte desde 2018; en 2025 era de 1.184 € brutos en 14 pagas.",
+  si:"Mejora la renta de los peores pagados y reduce la pobreza laboral.",
+  no:"En zonas o sectores de baja productividad puede frenar la contratación o empujar a la economía sumergida."},
+ tope_alquiler:{t:"Limitar el precio del alquiler",
+  q:"La Ley de Vivienda de 2023 permite declarar «zonas tensionadas» donde se topan las subidas y, para grandes propietarios, el precio según un índice oficial. Cada comunidad decide si lo aplica; Cataluña lo hizo en 2024.",
+  si:"Frena las subidas para quien ya vive de alquiler y da estabilidad a los inquilinos.",
+  no:"Puede reducir los pisos en alquiler, desviarlos a alquiler de temporada o turístico y desincentivar la inversión."},
+ vivienda_publica:{t:"Más vivienda pública",
+  q:"Que las administraciones construyan o compren viviendas para alquilarlas por debajo del precio de mercado. España tiene un parque social de alrededor del 2-3 % de las viviendas, frente a cerca del 9 % de media en la UE.",
+  si:"Es la vía más directa para ofrecer vivienda asequible estable y presionar los precios a la baja.",
+  no:"Es caro, tarda años en notarse y exige buena gestión para que el parque no se degrade."},
+ aborto_const:{t:"Blindar el aborto en la Constitución",
+  q:"Incluir en la Constitución el derecho a interrumpir el embarazo, hoy regulado por una ley de 2010 (aborto libre hasta la semana 14) que el Tribunal Constitucional avaló en 2023. Reformar la Constitución exige tres quintos del Congreso y del Senado.",
+  si:"Lo protege de que una futura mayoría cambie la ley.",
+  no:"Ya está avalado por el Constitucional; según sus críticos, la Constitución no debe cerrar debates morales que siguen abiertos."},
+ fin_singular:{t:"Financiación singular para Cataluña",
+  q:"Pacto PSOE-ERC de 2024: la Agència Tributària de Catalunya recaudaría todos los impuestos en Cataluña y pagaría al Estado una cuota por sus servicios y por solidaridad con otras comunidades.",
+  si:"Más autonomía fiscal y corregir lo que Cataluña considera un déficit fiscal excesivo.",
+  no:"Rompe la caja común y la igualdad entre comunidades; otras regiones podrían pedir lo mismo."},
+ irpf:{t:"Bajar el IRPF",
+  q:"El IRPF es el impuesto sobre la renta de las personas: cuanto más ganas, mayor porcentaje pagas. La recaudación se reparte entre Estado y comunidades. Bajarlo significa menos retención en la nómina. «Deflactar» es actualizar los tramos con la inflación para que una subida de sueldo que solo compensa precios no te haga pagar más.",
+  si:"Más dinero en el bolsillo, incentivo para trabajar e invertir, y evitar pagar más solo por la inflación.",
+  no:"Menos ingresos para pensiones, sanidad o educación; en euros, quien más gana es quien más se ahorra."},
+ suelo:{t:"Liberalizar suelo y agilizar la construcción",
+  q:"Reclasificar más terreno como edificable y acortar los plazos de planeamiento y licencias, que hoy pueden alargarse años.",
+  si:"Más oferta de vivienda a medio plazo para que bajen los precios.",
+  no:"Tarda en notarse, tiene impacto urbanístico y ambiental, y por sí solo no garantiza que la vivienda nueva sea asequible."},
+ okupacion:{t:"Desalojo rápido de la okupación",
+  q:"Endurecer las penas y acortar aún más los plazos para echar a quien ocupa una vivienda sin título, con propuestas de desalojo en 24-48 horas.",
+  si:"Protege a los propietarios y da seguridad al mercado del alquiler.",
+  no:"Sus críticos creen que el fenómeno es menor de lo que se percibe y piden garantías y alternativa habitacional para familias vulnerables."},
+ cgpj:{t:"Que los jueces elijan a los jueces (CGPJ)",
+  q:"El CGPJ gobierna a los jueces: nombramientos, ascensos y sanciones. De sus 20 vocales, 12 son jueces, pero los eligen Congreso y Senado. Estuvo bloqueado cinco años hasta el acuerdo PP-PSOE de 2024. La propuesta es que esos 12 los voten los propios jueces.",
+  si:"Más independencia frente a los partidos; es lo que recomienda la Comisión Europea.",
+  no:"Riesgo de corporativismo y de que la mayoría de una asociación judicial controle el órgano; el Parlamento aporta legitimidad democrática."},
+ nucleares:{t:"Prolongar las centrales nucleares",
+  q:"El calendario de 2019 prevé cerrar las siete centrales entre 2027 y 2035, empezando por Almaraz. Las eléctricas propietarias han pedido alargar Almaraz hasta 2030.",
+  si:"Energía estable y sin emisiones de CO₂ que da firmeza a la red y ayuda a contener el precio de la luz.",
+  no:"Residuos de larga duración, coste de mantenerlas y que la inversión debería ir a renovables y almacenamiento."},
+ expulsiones:{t:"Más expulsiones de inmigrantes irregulares",
+  q:"Agilizar las devoluciones de quienes están en España sin permiso. En la práctica depende de que los países de origen acepten el retorno. La UE aplica desde 2026 un nuevo Pacto de Migración y Asilo con procedimientos más rápidos en frontera.",
+  si:"Control de fronteras, cumplimiento de la ley y menos incentivo a la inmigración irregular.",
+  no:"Riesgo para los derechos de las personas, es caro y su eficacia es limitada sin acuerdos con terceros países."},
+ prioridad_nacional:{t:"Prioridad nacional en ayudas",
+  q:"Dar preferencia a los españoles (o a residentes de larga duración) en ayudas sociales y vivienda pública.",
+  si:"Sus defensores dicen que protege primero a quienes llevan más tiempo contribuyendo.",
+  no:"Muchos juristas creen que choca con la igualdad del artículo 14 de la Constitución y con las normas europeas de no discriminación."},
+ recentralizar:{t:"Recentralizar competencias",
+  q:"Devolver al Estado materias que hoy gestionan las comunidades, como educación o sanidad. Requeriría reformar estatutos de autonomía y probablemente la Constitución.",
+  si:"Mismos servicios en todo el país, menos duplicidades y menos gasto en administración.",
+  no:"Aleja la gestión del ciudadano y va contra el autogobierno que la Constitución reconoce."},
+ derogar_leyes:{t:"Derogar las leyes de memoria y de violencia de género",
+  q:"La Ley de Memoria Democrática (2022) regula exhumaciones y reparación a víctimas de la Guerra Civil y el franquismo. La Ley integral contra la violencia de género (2004) da protección específica a mujeres agredidas por su pareja. Vox propone sustituir esta por una ley de violencia intrafamiliar.",
+  si:"Sus defensores dicen que la ley debe tratar igual a hombres y mujeres y que la memoria no debe imponerse desde el Estado.",
+  no:"Sus críticos dicen que la violencia machista tiene causas propias y que la ley de memoria repara a víctimas olvidadas."},
+ expropiar_fondos:{t:"Expropiar viviendas a grandes fondos",
+  q:"Que el Estado adquiera de forma forzosa, pagando un justiprecio como exige la Constitución, viviendas de grandes tenedores para destinarlas a alquiler social.",
+  si:"Aumentaría rápido el parque público sin esperar años de construcción.",
+  no:"Costaría mucho dinero público, generaría litigios y podría ahuyentar la inversión en vivienda."},
+ impuesto_fortunas:{t:"Más impuestos a grandes fortunas",
+  q:"Hoy existe el Impuesto sobre el Patrimonio, que cada comunidad puede bonificar (Madrid lo hace al 100 %), y un impuesto estatal de solidaridad para patrimonios de más de 3 millones creado en 2022. La propuesta es subir y hacer permanentes estos impuestos.",
+  si:"Más recaudación y menos desigualdad, haciendo pagar a quien más tiene.",
+  no:"Recauda poco, puede provocar que capitales y residentes se vayan, y grava ahorro ya tributado."},
+ transicion:{t:"Acelerar la transición ecológica",
+  q:"Ir más rápido en renovables, coche eléctrico y reducción de emisiones. La UE se ha fijado reducir un 55 % las emisiones en 2030 y la neutralidad climática en 2050.",
+  si:"Menos dependencia de gas y petróleo importados, industria nueva y frenar el cambio climático.",
+  no:"Costes para agricultores, transportistas e industria si los plazos son cortos, y subida de precios en la transición."},
+ israel:{t:"Romper relaciones con Israel",
+  q:"España reconoció a Palestina en 2024 y aprobó en 2025 un embargo de armas a Israel. Podemos pide ir más lejos: romper relaciones diplomáticas y comerciales.",
+  si:"Presión máxima para que cese la ofensiva en Gaza y se respete el derecho internacional.",
+  no:"Aísla a España de sus socios, elimina canales de diálogo y afecta a empresas y a la cooperación en seguridad."},
+ gasto_militar:{t:"Gasto en defensa",
+  q:"En la cumbre de 2025 la OTAN fijó llegar al 5 % del PIB en 2035. España logró quedar fuera de esa cifra y alcanzó el 2 % en 2025. Podemos rechaza subirlo; D21 quiere cumplir los objetivos aliados.",
+  la:"Para subirlo", lb:"Para no subirlo",
+  si:"Disuasión ante Rusia, autonomía de Europa e industria propia.",
+  no:"Es dinero que deja de ir a servicios sociales, y el riesgo militar directo para España es bajo."},
+ referendum_monarquia:{t:"Referéndum monarquía o república",
+  q:"La Constitución establece la monarquía parlamentaria. Cambiarla exige la reforma más exigente: dos tercios de ambas cámaras, elecciones y referéndum. Cabría un referéndum consultivo previo, que no sería vinculante.",
+  si:"Que la ciudadanía decida la jefatura del Estado, cosa que no se ha votado por separado.",
+  no:"La monarquía da estabilidad y neutralidad, y ya se aprobó con la Constitución de 1978."},
+ regularizacion:{t:"Regularizar a inmigrantes",
+  q:"Dar permiso de residencia y trabajo a quienes ya viven en España sin papeles. En 2024 el Congreso admitió a trámite una iniciativa popular con más de 600.000 firmas para hacerlo.",
+  si:"Aflora economía sumergida, aporta cotizaciones y reconoce derechos a gente ya integrada.",
+  no:"Puede generar efecto llamada y premia haber entrado de forma irregular."},
+ gasto_politico:{t:"Recortar el gasto político",
+  q:"Reducir asesores, cargos, coches oficiales y subvenciones a partidos, sindicatos y patronal.",
+  si:"Ahorro y ejemplaridad en la administración.",
+  no:"El ahorro es pequeño frente al presupuesto total, y parte de ese gasto financia funciones necesarias."},
+ corrupcion_penas:{t:"Penas máximas para la corrupción",
+  q:"Endurecer las penas por malversación y cohecho, alargar la inhabilitación y obligar a devolver lo robado.",
+  si:"Disuade y responde al hartazgo ciudadano.",
+  no:"Las penas ya son altas; el problema real es la lentitud de los juicios y la falta de medios de jueces y fiscales."},
+ integracion_ue:{t:"Más integración europea",
+  q:"Dar más poder a la UE: defensa común, más deuda común y acabar con la unanimidad para decidir.",
+  si:"Europa pesa más en el mundo unida, y España se beneficia de los fondos y del mercado común.",
+  no:"Pérdida de soberanía y de control democrático cercano."},
+ igualdad_territorial:{t:"Igualdad entre territorios",
+  q:"Oponerse a sistemas fiscales singulares como la financiación propuesta para Cataluña o, en algunos casos, revisar el Concierto vasco y navarro, que están reconocidos en la Constitución.",
+  si:"Que cada español reciba los mismos recursos públicos viva donde viva.",
+  no:"Los regímenes forales son derechos históricos y la diversidad territorial es parte del pacto constitucional."},
+ referendum_autodet:{t:"Referéndum de autodeterminación",
+  q:"Votar si Cataluña (o Euskadi) se independiza, idealmente pactado con el Estado, como Escocia en 2014. El Tribunal Constitucional ha declarado que no cabe con la Constitución actual, que atribuye la soberanía al conjunto del pueblo español.",
+  si:"Resolver el conflicto votando, como en otras democracias.",
+  no:"Una parte no puede decidir sola sobre lo que es de todos, y divide a la sociedad."},
+ lenguas:{t:"Protección de la lengua propia",
+  q:"Reforzar el catalán, el euskera o el gallego en escuela, administración y medios; en Cataluña, la escuela usa la inmersión lingüística en catalán.",
+  si:"Son lenguas minorizadas que necesitan protección para sobrevivir.",
+  no:"Sus críticos piden garantizar también la enseñanza en castellano y libertad de elección."},
+ concierto:{t:"Concierto económico",
+  q:"Es el sistema del País Vasco y Navarra: la comunidad recauda casi todos los impuestos y paga al Estado un «cupo» por los servicios que este presta allí. Junts lo quiere para Cataluña, el BNG para Galicia y el PNV lo defiende.",
+  si:"Plena autonomía y responsabilidad fiscal.",
+  no:"Si se extiende, el Estado se queda con menos para redistribuir y los críticos dicen que el cupo actual está infravalorado."},
+ competencias_inmigracion:{t:"Inmigración para la Generalitat",
+  q:"Que el Estado delegue en Cataluña parte de la gestión migratoria: permisos, control y requisitos de integración como conocer el catalán. Se negoció con el PSOE, pero no ha llegado a aprobarse.",
+  si:"Gestión más cercana a la realidad catalana.",
+  no:"Fragmenta una competencia de Estado y la frontera es común."},
+ sociedades:{t:"Bajar impuestos a empresas y autónomos",
+  q:"Rebajar el impuesto de sociedades (tipo general del 25 %) y las cuotas de autónomos.",
+  si:"Más inversión, empleo y competitividad frente a otros países.",
+  no:"Menor recaudación y beneficios que no siempre se reinvierten."},
+ oficialidad_ue:{t:"Catalán oficial en la UE",
+  q:"Que catalán, euskera y gallego sean lenguas oficiales de la UE. Requiere la unanimidad de los 27 y está bloqueado en el Consejo desde 2023.",
+  si:"Reconocimiento para lenguas con millones de hablantes.",
+  no:"Coste de traducción y temor de otros países a abrir la puerta a sus lenguas regionales."},
+ transferencias:{t:"Completar el Estatuto de Gernika",
+  q:"El Estatuto vasco de 1979 prevé competencias que aún no se han traspasado del todo, como la gestión económica de la Seguridad Social.",
+  si:"Cumplir una ley orgánica vigente después de más de cuatro décadas.",
+  no:"Sus críticos rechazan sobre todo la Seguridad Social, porque debilitaría la caja única de pensiones."},
+ nuevo_estatus:{t:"Nuevo estatus para Euskadi",
+  q:"Un nuevo Estatuto que reconozca a Euskadi como nación y establezca una relación bilateral con el Estado, con garantías de que este no invada competencias.",
+  si:"Adapta el autogobierno a la realidad actual y reconoce la identidad nacional vasca.",
+  no:"Introduce asimetrías entre comunidades y podría no caber en la Constitución."},
+ ap9:{t:"Traspaso de la AP-9",
+  q:"La Autopista del Atlántico (Ferrol-Tui) es estatal y de peaje, con concesión hasta 2048. El BNG pide que pase a la Xunta y rebajar o quitar peajes; lleva años en negociación.",
+  si:"Gestión gallega de una vía clave para Galicia y peajes más baratos.",
+  no:"Coste de rescatar la concesión y quién asume el mantenimiento."},
+ menores_migrantes:{t:"Reparto de menores migrantes",
+  q:"Canarias atiende a miles de menores que llegan solos en cayuco. En 2025 se aprobó un reparto obligatorio entre comunidades, recurrido por varias gobernadas por el PP.",
+  si:"Solidaridad entre territorios: Canarias y Ceuta no pueden asumirlo solas.",
+  no:"Las comunidades reclaman medios y voz sobre cuántos y cómo se reparten."},
+ ref:{t:"REF y agenda canaria",
+  q:"El Régimen Económico y Fiscal de Canarias compensa la lejanía: IGIC en lugar de IVA, incentivos a empresas y ayudas al transporte. CC exige cumplir lo pactado con el Estado.",
+  si:"Corrige las desventajas de ser un territorio insular y alejado.",
+  no:"Más gasto para el Estado y debates sobre la eficacia de algunos incentivos."}
+};
+
+// Posturas: -2 muy en contra … +2 muy a favor. Orden: ORDER
+const Q = [
+ {cat:"Economía", t:"Hay que bajar impuestos, incluido el IRPF, aunque eso obligue a recortar gasto público.", p:[-1,2,2,-2,-2,2,1,-1,1,0,-2,-2,1]},
+ {cat:"Economía", t:"Las grandes fortunas, la banca y las energéticas deben pagar más impuestos.", p:[2,-2,-1,2,2,-1,-1,2,-1,-1,2,2,-1]},
+ {cat:"Economía", t:"Las pensiones deben subir siempre con el IPC, aunque aumente el déficit.", p:[2,1,1,2,2,0,-1,2,1,1,2,2,1]},
+ {cat:"Trabajo", t:"La jornada laboral máxima debe bajar por ley a 37,5 horas semanales sin reducir el sueldo.", p:[2,-1,-1,2,2,-2,-1,1,-2,-1,2,2,0]},
+ {cat:"Vivienda", t:"El Estado debe poder limitar el precio del alquiler en las zonas con precios tensionados.", p:[1,-2,-2,2,2,-2,-1,2,-1,0,2,2,-1]},
+ {cat:"Vivienda", t:"La prioridad para la vivienda es liberar suelo, facilitar la construcción privada y desalojar rápido las okupaciones.", p:[0,2,2,-1,-2,2,2,-1,1,1,-2,-1,1]},
+ {cat:"Sanidad", t:"Hay que reducir la gestión privada dentro de la sanidad pública.", p:[1,-1,-1,2,2,-2,-1,1,-1,0,2,2,0]},
+ {cat:"Educación", t:"La concertada debe financiarse igual que la pública y respetarse la libre elección de centro.", p:[-1,2,2,-2,-2,2,1,-1,1,1,-2,-2,1]},
+ {cat:"Inmigración", t:"Hay que endurecer la política migratoria y facilitar las expulsiones de quienes están en situación irregular.", p:[-1,1,2,-2,-2,2,0,-1,1,0,-2,-2,1]},
+ {cat:"Inmigración", t:"Apoyo regularizar a los inmigrantes que ya viven y trabajan en España.", p:[2,-1,-2,2,2,-2,0,2,-1,1,2,2,0]},
+ {cat:"Territorio", t:"Cataluña u otras comunidades deberían poder votar en referéndum sobre su independencia.", p:[-2,-2,-2,1,1,-2,-2,2,2,1,2,2,-1]},
+ {cat:"Territorio", t:"El Estado debería recuperar competencias como educación y sanidad.", p:[-1,-1,2,-2,-1,2,1,-2,-2,-2,-2,-2,-2]},
+ {cat:"Territorio", t:"La amnistía del procés fue positiva para la convivencia.", p:[2,-2,-2,2,2,-2,-2,2,2,2,2,2,0]},
+ {cat:"Territorio", t:"Cataluña debería recaudar y gestionar sus propios impuestos, como el País Vasco y Navarra.", p:[1,-2,-2,1,0,-2,-2,2,2,1,2,2,0]},
+ {cat:"Lengua", t:"En las comunidades con lengua propia hay que garantizar un mínimo de clases en castellano (por ejemplo, un 25 %).", p:[-1,2,2,-2,-1,2,2,-2,-2,-1,-2,-2,0]},
+ {cat:"Derechos", t:"El derecho al aborto debe quedar blindado en la Constitución.", p:[2,-1,-2,2,2,-2,1,2,1,1,2,2,1]},
+ {cat:"Derechos", t:"La eutanasia regulada es un derecho que debe mantenerse.", p:[2,-1,-2,2,2,-1,2,2,1,2,2,2,1]},
+ {cat:"Igualdad", t:"Hay que reforzar con más recursos las políticas contra la violencia de género.", p:[2,1,-2,2,2,-2,1,2,1,2,2,2,1]},
+ {cat:"Energía", t:"Las centrales nucleares deben cerrar según el calendario previsto, empezando por Almaraz.", p:[1,-2,-2,2,2,-2,-2,1,-1,0,2,2,0]},
+ {cat:"Clima", t:"La transición ecológica debe acelerarse aunque suponga costes para el campo o el transporte.", p:[1,-1,-2,2,2,-2,0,1,0,0,1,1,0]},
+ {cat:"Defensa", t:"España debe subir el gasto en defensa hasta los nuevos objetivos de la OTAN.", p:[-1,1,1,-2,-2,1,2,-1,0,1,-2,-2,0]},
+ {cat:"Exterior", t:"España debe mantener el embargo de armas y las sanciones a Israel por Gaza.", p:[2,-1,-2,2,2,-2,0,2,1,1,2,2,1]},
+ {cat:"Europa", t:"La Unión Europea debería tener más poder sobre los Estados miembros.", p:[1,1,-2,0,-1,-2,2,1,1,1,0,-1,1]},
+ {cat:"Instituciones", t:"Los jueces deberían elegir a la mayoría del CGPJ, sin que lo pacten los partidos.", p:[-1,2,2,-2,-2,2,2,-1,0,0,-1,-1,0]},
+ {cat:"Instituciones", t:"España debería votar en referéndum entre monarquía y república.", p:[-2,-2,-2,2,2,-2,-2,2,1,0,2,2,-1]}
+];
+const LABELS = ["Muy en contra","En contra","Neutral","A favor","Muy a favor"];
+const VAL = [-2,-1,0,1,2];
+const POLL = [["PP",33.1],["PSOE",27.3],["VOX",18.6]];
+
+let ans = Array(Q.length).fill(null), imp = Array(Q.length).fill(false), cur = 0;
+try{const s=JSON.parse(localStorage.getItem("brujula29n")||"null"); if(s&&s.ans&&s.ans.length===Q.length){ans=s.ans;imp=s.imp;cur=Math.min(s.cur||0,Q.length-1);}}catch(e){}
+const save=()=>{try{localStorage.setItem("brujula29n",JSON.stringify({ans,imp,cur}))}catch(e){}};
+const $=id=>document.getElementById(id);
+
+// Fechas clave en hora peninsular (CET, UTC+1): no dependen de la zona horaria del visitante.
+const T_VEDA = Date.parse("2026-11-24T00:00:00+01:00");   // empieza la veda de sondeos (LOREG 69.7)
+const T_DIA  = Date.parse("2026-11-29T00:00:00+01:00");   // día de votación
+const T_FIN  = Date.parse("2026-11-29T21:00:00+01:00");   // cierran los últimos colegios (Canarias, 20:00 hora local)
+
+// Cuenta atrás y aviso de sondeos. Se recalcula cada minuto por si la página queda abierta al cambiar el día.
+function actualizarFecha(now){
+  now = now ?? Date.now();
+  let n, lbl;
+  if(now < T_DIA){
+    n = Math.ceil((T_DIA - now) / 864e5);
+    lbl = n === 1 ? "día para votar" : "días para votar";
+    if(n === 1){ n = "Mañana"; lbl = "se vota"; }
+  } else if(now < T_FIN){ n = "Hoy"; lbl = "se vota"; }
+  else { n = "29-N"; lbl = "ya se votó"; }
+  $("days").textContent = n; $("dayslbl").textContent = lbl;
+
+  // El sondeo deja de mostrarse al empezar la veda y ya no vuelve (después del 29-N estaría desfasado).
+  const sinSondeo = now >= T_VEDA;
+  $("pollBox").hidden = sinSondeo;
+  $("vedaBox").hidden = !sinSondeo;
+  $("vedaTit").textContent = now < T_FIN ? "Periodo de veda" : "Elecciones celebradas";
+  $("vedaTxt").textContent = now < T_FIN
+    ? "La ley electoral (LOREG, art. 69.7) prohíbe difundir sondeos en los cinco días anteriores a la votación, así que esta sección ya no los muestra."
+    : "Las elecciones ya se han celebrado. Consulta los resultados oficiales en la web del Ministerio del Interior.";
+}
+actualizarFecha();
+setInterval(actualizarFecha, 60000);
+
+// Sondeo
+$("poll").innerHTML=POLL.map(([k,v])=>`<div class="prow" style="--pc:${P[k].c}"><span>${P[k].n}</span><div class="ptrack"><div class="pfill" style="width:${v/40*100}%;background:${P[k].c}"></div></div><span class="num">${v.toFixed(1).replace(".",",")} %</span></div>`).join("");
+
+// Fichas
+const card=k=>{const f=FICHAS[k];return `<article class="party" style="--pc:${P[k].c}">
+ <div class="top"><h3>${P[k].n}</h3><span class="tag">${f.e23}</span></div>
+ <span class="tag">${f.tag}</span>
+ <p class="who">Encabeza: <b>${f.lider}</b></p>
+ <p class="hist">${f.hist}</p>
+ <details><summary>Propuestas destacadas</summary><div class="props">${f.prop.map(x=>{const e=EXPL[x];return `<details class="prop"><summary>${e.t}</summary><div class="pbody"><p>${e.q}</p><p><b>${e.la||"Quien lo apoya dice"}:</b> ${e.si}</p><p><b>${e.lb||"Quien lo critica dice"}:</b> ${e.no}</p></div></details>`}).join("")}</div></details>
+ <a class="plink" href="${f.web||"https://www.google.com/search?q="+encodeURIComponent("programa electoral "+P[k].n+" elecciones 29 noviembre 2026")}" target="_blank" rel="noopener">${f.web?"Web oficial ↗":"Buscar su programa ↗"}</a></article>`};
+$("gridState").innerHTML=["PP","PSOE","VOX","FA","POD","D21","SALF"].map(card).join("");
+$("gridReg").innerHTML=["ERC","JUNTS","BILDU","PNV","BNG","CC"].map(card).join("");
+
+// Quiz
+$("likert").innerHTML=LABELS.map((l,i)=>`<button type="button" data-v="${VAL[i]}" id="lk${i}">${l}</button>`).join("");
+function render(){
+  const q=Q[cur];
+  $("qcat").textContent=q.cat; $("qnum").textContent=`${cur+1} / ${Q.length}`;
+  $("qbar").style.width=((cur+1)/Q.length*100)+"%";
+  $("qtext").textContent=q.t;
+  const done=ans.filter(a=>a!==null).length, nk=imp.filter((x,i)=>x&&ans[i]!==null).length;
+  $("qhelp").textContent=`Respondidas: ${done} de ${Q.length}${nk?` · ${nk} marcada${nk>1?"s":""} como clave`:""}.`;
+  document.querySelectorAll("#likert button").forEach(b=>b.classList.toggle("on",ans[cur]!==null&&+b.dataset.v===ans[cur]));
+  $("impo").checked=imp[cur];
+  $("prev").disabled=cur===0;
+  $("skip").textContent=cur===Q.length-1?"No lo tengo claro y terminar":"No lo tengo claro";
+  $("next").hidden=!(cur===Q.length-1||done>=10);
+}
+function go(n){cur=Math.max(0,Math.min(Q.length-1,n));save();render();}
+$("likert").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+  ans[cur]=+b.dataset.v;save();render();
+  setTimeout(()=>{cur<Q.length-1?go(cur+1):showResults()},180);});
+$("skip").onclick=()=>{ans[cur]=null;save();cur<Q.length-1?go(cur+1):showResults();};
+$("prev").onclick=()=>go(cur-1);
+$("next").onclick=showResults;
+$("impo").onchange=e=>{imp[cur]=e.target.checked;save();render();};
+$("restart").onclick=()=>{ans.fill(null);imp.fill(false);cur=0;save();render();$("resultado").hidden=true;location.hash="quiz";$("quiz").scrollIntoView({behavior:"smooth"});};
+
+const pos=v=>["muy en contra","en contra","neutral","a favor","muy a favor"][v+2];
+function showResults(){
+  const answered=ans.map((a,i)=>a===null?null:i).filter(i=>i!==null);
+  const sec=$("resultado"); sec.hidden=false;
+  if(answered.length<5){$("rlead").textContent="Responde al menos 5 preguntas para calcular la afinidad.";$("top3").innerHTML="";$("results").innerHTML="";sec.scrollIntoView({behavior:"smooth"});return;}
+  const res=ORDER.map((k,pi)=>{let d=0,w=0;const per=[];
+    answered.forEach(i=>{const ww=imp[i]?2:1;const diff=Math.abs(ans[i]-Q[i].p[pi]);d+=ww*diff;w+=ww*4;per.push({i,diff,ww});});
+    return {k,pct:Math.round(100*(1-d/w)),per};}).sort((a,b)=>b.pct-a.pct);
+  $("rlead").textContent=`Con ${answered.length} respuestas${imp.some((x,i)=>x&&ans[i]!==null)?" y tus temas prioritarios contando doble":""}. Pulsa un partido para ver en qué coincidís y en qué no.`;
+  $("top3").innerHTML=res.slice(0,3).map((r,i)=>`<div style="--pc:${P[r.k].c}"><span class="eyebrow">${["Más afín","Segundo","Tercero"][i]}</span><b class="num">${r.pct} %</b>${P[r.k].n}</div>`).join("");
+  $("results").innerHTML=res.map((r,idx)=>{const pi=ORDER.indexOf(r.k);
+    const s=[...r.per].sort((a,b)=>a.diff-b.diff||b.ww-a.ww);
+    const agree=s.filter(x=>x.diff<=1).slice(0,3), dis=[...r.per].sort((a,b)=>b.diff*b.ww-a.diff*a.ww).filter(x=>x.diff>=2).slice(0,3);
+    const li=x=>`<li>${Q[x.i].t} <span class="tag">Tú: ${pos(ans[x.i])} · ${P[r.k].n}: ${pos(Q[x.i].p[pi])}</span></li>`;
+    return `<div class="rrow" style="--pc:${P[r.k].c}">
+      <button class="rhead" aria-expanded="false" aria-controls="rd${idx}" id="rb${idx}"><span class="rname"><span class="dot"></span>${P[r.k].n}</span><span class="rtrack"><span class="rfill" style="display:block;width:${r.pct}%"></span></span><span class="rpct">${r.pct} %</span></button>
+      <div class="rdetail" id="rd${idx}" hidden><div><span class="ok">Coincidís</span><ul>${agree.length?agree.map(li).join(""):"<li>En casi nada.</li>"}</ul></div>
+      <div><span class="ko">Chocáis</span><ul>${dis.length?dis.map(li).join(""):"<li>En ningún tema de forma clara.</li>"}</ul></div></div></div>`;}).join("");
+  document.querySelectorAll(".rhead").forEach(b=>b.onclick=()=>{const d=$(b.getAttribute("aria-controls"));d.hidden=!d.hidden;b.setAttribute("aria-expanded",String(!d.hidden));});
+  location.hash="resultado"; sec.scrollIntoView({behavior:"smooth"});
+}
+render();
+if(ans.filter(a=>a!==null).length>=Q.length) showResults();
+</script>
+</body>
+</html>
